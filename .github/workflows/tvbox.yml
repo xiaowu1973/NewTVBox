@@ -50,11 +50,6 @@ jobs:
             rm -rf temp-"$name" 
           done 
 
-          echo "==== 同步完成 ====" 
-
-          find dr tvbox T4 wzxxcz ljlfct01 Tomorrow aa999ok sky4726 ediart lemonguo121 leexuben yjl zheng1976 FGBLH yihad168 cpu_iy reF1nd \
-            -type f -exec touch {} + 
-
       - name: Download and extract NewTVBox 
         run: | 
           echo "==== 开始下载 GitHub 仓库 PizazzGY/NewTVBox ====" 
