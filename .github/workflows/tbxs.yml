@@ -84,15 +84,6 @@ jobs:
           git reset --hard origin/$DEFAULT_BRANCH 
           git push origin master || true 
 
-      - name: Unzip all ZIP files in gitee-source (keep ZIP) 
-        run: | 
-          cd gitee-source 
-          for file in *.zip; do 
-            [ -e "$file" ] || continue 
-            unzip -o "$file" 
-          done 
-          cd .. 
-
       - name: Commit and force push 解压内容到 master（保留 zip） 
         run: | 
           git add . 
